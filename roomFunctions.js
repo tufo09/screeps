@@ -1,34 +1,19 @@
 Room.prototype.cacheObjects = function cacheObjects() {
-	// code by Random Encounter
 	// declare storage array for objects to cache
 	let storageArray = [];
 
-	// search room for each object type
-	const sources 			= this.find(FIND_SOURCES	);
-	const minerals 			= this.find(FIND_MINERALS	);
-	const deposits 			= this.find(FIND_DEPOSITS	);
-	const allStructures = this.find(FIND_STRUCTURES, { filter: (i) => 								i.structureType == STRUCTURE_CONTROLLER ||	i.structureType == STRUCTURE_SPAWN 	||	i.structureType == STRUCTURE_EXTENSION 	|| i.structureType == STRUCTURE_TOWER 	|| i.structureType == STRUCTURE_CONTAINER || i.structureType == STRUCTURE_STORAGE || 	i.structureType == STRUCTURE_RAMPART 		|| i.structureType == STRUCTURE_LINK 		|| i.structureType == STRUCTURE_EXTRACTOR || i.structureType == STRUCTURE_LAB 		|| 	i.structureType == STRUCTURE_TERMINAL 	|| i.structureType == STRUCTURE_FACTORY || i.structureType == STRUCTURE_OBSERVER 	|| i.structureType == STRUCTURE_NUKER 	|| 	i.structureType == STRUCTURE_POWER_SPAWN });
-	
-	const controller 	= _.filter(allStructures, { structureType: STRUCTURE_CONTROLLER }	);
-	const spawns 			= _.filter(allStructures, { structureType: STRUCTURE_SPAWN 			} );
-	const extensions 	= _.filter(allStructures, { structureType: STRUCTURE_EXTENSION 	} );
-	const towers 			= _.filter(allStructures, { structureType: STRUCTURE_TOWER 			} );
-	const containers 	= _.filter(allStructures, { structureType: STRUCTURE_CONTAINER 	} );
-	const storage 		= _.filter(allStructures, { structureType: STRUCTURE_STORAGE 		} );
-	const ramparts 		= _.filter(allStructures, { structureType: STRUCTURE_RAMPART 		} );
-  const links 			= _.filter(allStructures, { structureType: STRUCTURE_LINK				} );
-	const extractor 	= _.filter(allStructures, { structureType: STRUCTURE_EXTRACTOR 	} );
-	const labs 				= _.filter(allStructures, { structureType: STRUCTURE_LAB 				} );
-	const terminal 		= _.filter(allStructures, { structureType: STRUCTURE_TERMINAL 	} );
-	const factory 		= _.filter(allStructures, { structureType: STRUCTURE_FACTORY 		} );
-	const observer 		= _.filter(allStructures, { structureType: STRUCTURE_OBSERVER 	} );
-	const powerspawn 	= _.filter(allStructures, { structureType: STRUCTURE_POWER_SPAWN} );
-	const nuker 			= _.filter(allStructures, { structureType: STRUCTURE_NUKER 			} );
 
 	// check if the 'objects' object exists in room memory & create it if not
 	if (!this.memory.objects) {
 		this.memory.objects = {};
 	}
+
+
+
+
+
+
+	
 	// if sources are found, add their IDs to array and add array to room's 'objects' memory
 	if (sources) {
 		for (i = 0; i < sources.length; i++)
